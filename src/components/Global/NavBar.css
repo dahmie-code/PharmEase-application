@@ -1,0 +1,132 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #173C96;
+    height: 80px;
+    padding: 11px 77px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    color: #fff;
+  }
+
+  .navbar__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo-menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .navbar__right {
+    cursor: pointer;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    margin-left: 62px;
+  }
+  .navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .sidebar-toggle {
+    position: absolute;
+    top: 25px;
+    left: 15%;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;    
+    width: 14%;
+    justify-content: space-between;
+  }
+
+  .divider{
+    border-left: 1px solid #fff;
+    height:44px;
+  }
+  .navbar__notification{
+    font-size: 24px;
+  }
+
+  .navbar__avatar{
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar__avatar >p{
+    font-size: 18px;
+    font-weight: 600;
+    margin-inline-start: 13px;
+    margin-inline-end: 14px;
+  }
+  .navbar__avatar >p span{
+    font-size: 16px;
+    font-weight: 400;
+    display: block;
+  }
+  .navbar-dropdown-icon{
+    font-size: 15px;
+    cursor: pointer;
+  }
+
+  .navbar__dropdown-avatar{
+    font-size: 50px;
+    color: #444;
+  }
+  .navbar__dropdown{
+    background-color: #fff;
+    width: 266px;
+    border: none;
+    position: fixed;
+    top: 8.5%;
+    right: 80px;
+    z-index: 999;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
+    padding: 30px 25px 25px;
+  }
+
+  .navbar-dropdown-item{
+    list-style: none;
+    border-bottom: 1px solid rgba(68, 68, 68, 0.3);
+    margin-block-end: 16px;
+    padding-block-end: 13px;
+  }
+
+  .navbar__dropdown-icon{
+    font-size: 17px;
+    margin-inline-end: 18px;
+    color: #444;
+  }
+  .navbar-dropdown-link{
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #444;
+  }
+  .navbar-dropdown-user{
+    margin-block-end: 30px;
+  }
+  .navbar-dropdown-user h3{
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+      }
+  .navbar-dropdown-user p{
+    font-size: 15px;
+    color: #444;
+  }
+  .navbar-dropdown-header{
+    text-align: center;
+  }
+
