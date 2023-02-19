@@ -1,7 +1,7 @@
 import './App.css';
 
 // import NavBar from "../src/components/Global/NavBar"
-import MainContainer from './components/MainContainer';
+import MainContainer from './components/Global/MainContainer';
 // import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // import SignUp from "./components/Start/SignUp";
 // import Login from "./components/Start/Login";

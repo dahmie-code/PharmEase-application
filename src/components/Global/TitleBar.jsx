@@ -5,6 +5,8 @@ import { GiMedicines } from "react-icons/gi";
 import { BsStack, BsGearFill } from "react-icons/bs";
 import { MdOutlineInventory } from "react-icons/md";
 import { IoPersonCircleSharp } from "react-icons/io5";
+import "./Sidebar.css";
+
 
 const TitleBar = ({ icon, title }) => {
   let iconElement = null;
@@ -47,17 +49,7 @@ const TitleBar = ({ icon, title }) => {
   }
 
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",     
-        backgroundColor: "fff",
-        height: "53px",
-        padding: "15px",
-        borderRadius: "10px",
-        margin: "64px 80px 26px 21px",
-      }}
-    >
+    <div className="titlebar__container">
       {/* Only render the icon if it's provided */}
       {iconElement && (
         <div

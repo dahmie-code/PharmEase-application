@@ -36,7 +36,7 @@
     padding: 0 20px;
     position: fixed;
     top: 100px;
-    left: 50px;
+    left: 80px;
     width: 305px;
     height: 85%;
     list-style: none;
@@ -45,6 +45,7 @@
     border-radius: 15px;
     box-shadow:  0 1px 3px rgba(0, 0, 0, 0.3);
   }
+
   .sidebar__closed{
     height: 91.7vh;
     width: 80px;
@@ -81,3 +82,18 @@
     margin-left: 10px;
   }
   
+  .content-container {
+    display: inline;    
+    margin: 0;
+  }
+
+  .titlebar__container{
+    display: flex;
+    align-items: center;    
+    background-color: #fff;            
+    width: 95%;
+    height: 53px;               
+    padding: 15px;
+    border-radius: 10px;
+    margin:15px auto 50px;
+  }

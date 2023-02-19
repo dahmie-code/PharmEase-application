@@ -32,17 +32,7 @@
     font-weight: bold;
   }
   
-  .sidebar-toggle {
-    position: absolute;
-    top: 25px;
-    left: 15%;
-    font-size: 1.5rem;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    color: #fff;
-  }
-  
+ 
   .navbar-right {
     display: flex;
     align-items: center;    
@@ -128,5 +118,19 @@
   }
   .navbar-dropdown-header{
     text-align: center;
+  }
+
+ .wrapper{
+  display: flex;
+ }
+  .content {
+    flex-grow: 1;
+    transition: margin-left 0.3s ease;
+  }
+  
+  .content.shifted {
+    margin-left: 405px; /* adjust this value to match the width of your sidebar */
+    margin-top: 30px;
+    transform: translateX(0);
   }
 

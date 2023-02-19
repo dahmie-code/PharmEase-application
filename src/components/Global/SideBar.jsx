@@ -10,6 +10,7 @@ import {IoPersonCircleSharp} from "react-icons/io5";
 
 
 
+
 const SideBar = ({isOpen}) => {
 
     return (
@@ -71,6 +72,7 @@ const SideBar = ({isOpen}) => {
           </li>
         </ul>
       </aside>
+      
     </>
   );
 };
