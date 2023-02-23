@@ -30,13 +30,13 @@ const Dashboard = () => {
           </div>
         </div>
         <div className="last-cards">
-          <div className="chart">
+          <div className="chart box">
             <DailyReport />
           </div>
-          <div className="to-do">
+          <div className="to-do box">
           <TaskList/>
           </div>
-          <div className="calendar">
+          <div className="calendar box">
             <Calendar />
           </div>
         </div>

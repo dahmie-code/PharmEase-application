@@ -9,15 +9,6 @@
   margin: 10px;
 }
 
-/* .Sample__container__content {
-  display: flex;
-  max-width: 100%;
-  flex-basis: 420px;
-  flex-direction: column;
-  flex-grow: 100;
-  align-items: stretch;
-} */
-
 .Sample__container__content .react-calendar {
   margin: 0 auto;
 }
@@ -26,7 +17,7 @@ abbr[title] {
     text-decoration: none;
 }
 .react-calendar {
-    width: 286px;
+    /* width: 286px; */
     height: 250px;   
     background: #173C96;
     border: 1px solid #173C96;

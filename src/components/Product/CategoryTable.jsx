@@ -3,12 +3,15 @@ import { Table, Button } from 'react-bootstrap';
 import AddCategoryModal from './AddCategoryModal';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { category } from './category';
+import Pagination from '../Global/Pagination';
 
 const CategoryTable = ({ categories = category }) => {
   const [showModal, setShowModal] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredCategories, setFilteredCategories] = useState(categories);
   const [editingCategories, setEditingCategories] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [productsPerPage] = useState(10);
 
   const handleCloseModal = () => {
     setShowModal(false);
@@ -41,6 +44,16 @@ const CategoryTable = ({ categories = category }) => {
     setFilteredCategories(searchResults);
   };
 
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+  //   Logic to display current products
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+  const currentProducts = filteredCategories.slice(
+    indexOfFirstProduct,
+    indexOfLastProduct
+  );
+
   return (
     <div>
       <div className="d-flex justify-content-between align-items-center mb-4">
@@ -54,7 +67,7 @@ const CategoryTable = ({ categories = category }) => {
           onChange={handleSearch}
         />
       </div>
-      <Table striped bordered hover>
+      <Table bordered hover>
         <thead>
           <tr>
             <th>S/N</th>
@@ -64,7 +77,7 @@ const CategoryTable = ({ categories = category }) => {
           </tr>
         </thead>
         <tbody>
-          {filteredCategories.map((category, index) => (
+          {currentProducts.map((category, index) => (
             <tr key={category.id}>
               <td>{index + 1}</td>
               <td>{category.name}</td>
@@ -80,6 +93,12 @@ const CategoryTable = ({ categories = category }) => {
           ))}
         </tbody>
       </Table>
+      <Pagination
+        productsPerPage={productsPerPage}
+        totalProducts={filteredCategories.length}
+        paginate={paginate}
+        currentPage={currentPage}
+      />
       <AddCategoryModal
         show={showModal}
         handleClose={handleCloseModal}

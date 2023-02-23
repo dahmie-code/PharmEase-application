@@ -75,3 +75,13 @@ td, th{
     display: flex;
     justify-content: center;
 } */
+
+.active>.page-link, .page-link.active {
+    color: #fff;
+    background-color: #65BC50;
+    border-color: transparent;
+}
+
+.page-link {
+    color:#444444;
+}

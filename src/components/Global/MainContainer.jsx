@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-// import { Navigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 // import Dashboard from "../Dashboard/Dashboard";
 // import TitleBar from "./TitleBar";
 // import Login from "../Start/Login";
@@ -14,22 +14,22 @@ import SideBar from "./SideBar";
 
 const MainContainer = () => {
   const [isOpen, setIsOpen] = useState(false);
-  // const [authenticated, setauthenticated] = useState(null);
+  const [authenticated, setauthenticated] = useState(null);
 
   const toggle = () => {
     setIsOpen(!isOpen);
   };
 
-  // useEffect(() => {
-  //   const loggedInUser = localStorage.getItem("authenticated");
-  //   if (loggedInUser) {
-  //   setauthenticated(loggedInUser);
-  //  }
-  // }, []);
+  useEffect(() => {
+    const loggedInUser = localStorage.getItem("authenticated");
+    if (loggedInUser) {
+    setauthenticated(loggedInUser);
+   }
+  }, []);
     
-  //  if (!authenticated) {
-  //   return <Navigate replace to="/login" />;
-  //  } else {}
+   if (!authenticated) {
+    return <Navigate replace to="/" />;
+   } else {
   return (
   
     <div className="navbar-sidebar">
@@ -45,7 +45,7 @@ const MainContainer = () => {
     </div>
   
     
-  );
+  );}
 };
 
 export default MainContainer;

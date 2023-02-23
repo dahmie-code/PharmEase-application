@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import './Form.css';
 import LoginImg from "../../assets/signIn.jpg";
-
 import { FormInput, EyeIcon } from "./common";
 
 // const navigate = useNavigate();
@@ -31,7 +30,7 @@ const Login = () => {
    if (account && account.password === password) {
    setauthenticated(true)
     localStorage.setItem("authenticated", true);
-    navigate("/maincontainer");
+    navigate("maincontainer");
     }
    };
   // const handleLogin = useNavigate();
@@ -79,7 +78,7 @@ const Login = () => {
               </label>
               <a href="#forgotPassword" target="_blank" rel="noopener noreferrer">Forgot Password?</a>
             </div>
-            <input type="submit" value="Log in" />
+            <button type="submit">Log in</button>
         </form>
         <p className="noAccount">Don't have an account? <Link to="/signup">Sign up</Link></p>
       </div>

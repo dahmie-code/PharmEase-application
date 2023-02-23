@@ -1,8 +1,8 @@
 import './App.css';
 // import NavBar from "../src/components/Global/NavBar"
-// import { BrowserRouter, Routes, Route } from 'react-router-dom';
-// import SignUp from "./components/Start/SignUp";
-// import Login from "./components/Start/Login";
+import {  Routes, Route } from 'react-router-dom';
+import SignUp from "./components/Start/SignUp";
+import Login from "./components/Start/Login";
 import MainContainer from './components/Global/MainContainer';
 // import Dashboard from "./components/Dashboard/Dashboard";
 
@@ -15,19 +15,19 @@ function App() {
   // };
 
   return (
-    <div className="App">
+    // <div className="App">
       
-      <MainContainer />
+    //   <MainContainer />
       
-    </div>
-    //    <BrowserRouter>
-    //   <Routes>
-    //     <Route  path="/signup" element={<SignUp />} />
-    //     <Route index path="login" element={<Login />} />
-    //     <Route path="/maincontainer" element={<MainContainer />} />
+    // </div>
+       
+      <Routes>
+        {/* <Route  exact path="/signup" element={<SignUp />} />
+        <Route exact path="/" element={<Login />} /> */}
+        <Route exact path="/" element={<MainContainer />} />
         
-    //   </Routes>
-    // </BrowserRouter>
+      </Routes>
+  
   
   );
 }

@@ -7,11 +7,6 @@ import {BsStack, BsGearFill} from "react-icons/bs";
 import {MdOutlineInventory} from "react-icons/md";
 import {IoPersonCircleSharp} from "react-icons/io5";
 
-
-
-
-
-
 const SideBar = ({isOpen}) => {
 
     return (

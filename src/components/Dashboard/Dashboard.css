@@ -1,9 +1,9 @@
 
  .dashboard-container{
     margin-inline-start: 21px;
-    margin-inline-end: 80px;
-    /* max-width: 955px;
-    margin: auto; */
+    /* margin-inline-end: 80px; */
+    width: 90%;
+    margin: 0 auto;
  }
 
 .mid-cards {
@@ -13,23 +13,38 @@
     margin-block-end: 32px;
 }
 
+@media (max-width: 600px) {
+    .mid-cards {
+        flex-direction: column;
+        }
+}
 .graph {
-    width: 434px;
-    height: 294px;
+    width: 50%;
+    height: 380px;
     background-color: #fff;
     border-radius: 15px;
     padding: 13px 20px;
 }
+
+
 
 .orders{
     background-color: #fff;
     border-radius: 15px;
     padding: 13px 20px;
-    max-width: 493px;
-    height: 294px;
+    width: 45%;
+    height: 380px;
     overflow-y: hidden;
 }
-
+/* @media (max-width: 600px) {
+} */
+@media (max-width: 600px) {
+    .graph, .orders {
+        width: 100%;
+        margin-bottom: 20px;
+        height: 250px;       
+    } 
+}
 .recent-orders h2{
     font-size: 24px;
     color: #173C96;
@@ -79,9 +94,21 @@ color: #444;
     justify-content: space-between;
     align-items: center;
 }
+.box{
+    width:31%;
+}
+
+@media screen and (max-width:600px){
+    .last-cards{
+        flex-direction: column;
+    }
+    .box{
+        width:100%;
+        margin-bottom: 20px;
+    }
+}
 .chart {
     background-color: #fff;
-    width: 305px;
     height: 269px;
     padding: 20px;
     border-radius: 15px;

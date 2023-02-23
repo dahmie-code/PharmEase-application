@@ -3,25 +3,48 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 66vh;
+    /* height: 66vh; */
+    width: 100%;
   }
   
+@media (max-width: 600px) {
+  .form-container{
+    flex-direction: column;
+    width: 100%;
+  }
+}
   .form-image {
     width: 50%;
     /* padding: 20px; */
   }
-  
+  @media (max-width: 600px) {
+    .form-image{
+      width: 100%;
+    }
+  }
   .form-image img {
     width: 100%;
-    /* object-fit: cover; */
+    object-position: bottom;
+    height: 95vh;
+    object-fit: cover;
   }
-  
+  @media (max-width:600px){
+    .form-image img{
+      height: 35vh;
+    }
+  }
   .form {
     width: 50%;
     padding: 20px 86px;
     text-align: center;
   }
-  
+  @media (max-width: 600px) {
+    .form{
+      width: 100%;
+      order: 2;
+      padding: 10px 20px;
+    }
+  }
   .form h2 {
     /* margin-top: 0; */
     font-weight: 700;
