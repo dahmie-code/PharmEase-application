@@ -1,14 +1,21 @@
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import './Form.css';
 import LoginImg from "../../assets/signIn.jpg";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+
 import { FormInput, EyeIcon } from "./common";
 
+// const navigate = useNavigate();
 const Login = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
+  const [authenticated, setauthenticated] = useState(
+    localStorage.getItem(localStorage.getItem("authenticated") || false));
+
+  const users = [{ email: "test@email.com", password: "testpassword" }];
 
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
@@ -19,18 +26,23 @@ const Login = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Email: ", email);
-    console.log("Password: ", password);
-    console.log("Remember Me: ", rememberMe);
-  };
+    e.preventDefault()
+    const account = users.find((user) => user.email=== email);
+   if (account && account.password === password) {
+   setauthenticated(true)
+    localStorage.setItem("authenticated", true);
+    navigate("/maincontainer");
+    }
+   };
+  // const handleLogin = useNavigate();
+  // handleLogin("/main");  
 
   return (
     <div className="form-container">
       <div className="form">
         <h2>Welcome Back!</h2>
         <p>Please enter your details below.</p>
-        <form action="" onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
         <FormInput
             type="email"
             id="email"
@@ -67,9 +79,9 @@ const Login = () => {
               </label>
               <a href="#forgotPassword" target="_blank" rel="noopener noreferrer">Forgot Password?</a>
             </div>
-            <button type="submit">Log in</button>
+            <input type="submit" value="Log in" />
         </form>
-        <p className="noAccount">Don't have an account? <Link to="/">Sign up</Link></p>
+        <p className="noAccount">Don't have an account? <Link to="/signup">Sign up</Link></p>
       </div>
       <div className="form-image">
         <img src={LoginImg} alt="Login" />

@@ -1,4 +1,4 @@
-.navbar {
+.navbar__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,7 +14,9 @@
     justify-content: space-between;
     align-items: center;
   }
-  
+  .navbar__left >h1{
+    font-size: 24px;
+  }
   .logo-menu{
     display: flex;
     justify-content: space-around;
@@ -122,6 +124,8 @@
 
  .wrapper{
   display: flex;
+  justify-content: space-between;
+  background-color: #E3E4E7;
  }
   .content {
     flex-grow: 1;
@@ -129,8 +133,10 @@
   }
   
   .content.shifted {
-    margin-left: 405px; /* adjust this value to match the width of your sidebar */
+    /* adjust this value to match the width of your sidebar */
+    /* margin-left: 405px;  */
     margin-top: 30px;
+    /* max-width: 955px; */
     transform: translateX(0);
   }
 

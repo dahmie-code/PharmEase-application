@@ -1,0 +1,94 @@
+.todo-list {
+    max-width: 327px;
+    height: 269px;
+    /* margin: 0 auto; */
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 15px;
+    overflow: hidden;
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); */
+  }
+  
+  .todo-list > h2 {
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: #173C96;
+  }
+  
+  .add-btn {
+    background-color: #22215B;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  form {
+    margin-top: 10px;
+  }
+  
+  input[type="text"] {
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px;
+    width: 70%;
+  }
+  
+  button[type="submit"] {
+    background-color: #22215B;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+  }
+  
+  .todo-list-done li{
+    background-color: #EEF7FE;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 10px;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .todo-list-done span {
+    font-size: 16px;
+    color: #22215B;
+    cursor: pointer;
+  }
+  
+  .done {
+    text-decoration: line-through;
+  }
+  
+  .delete-btn {
+    margin-left: auto;
+    color: #C7DDED;
+    border: none;
+    cursor: pointer;
+  }
+  

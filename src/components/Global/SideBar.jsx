@@ -11,6 +11,7 @@ import {IoPersonCircleSharp} from "react-icons/io5";
 
 
 
+
 const SideBar = ({isOpen}) => {
 
     return (
@@ -20,54 +21,54 @@ const SideBar = ({isOpen}) => {
         
         <ul className="sidebar__menu">
         <div className="sidebar__avatar">
-        {isOpen && <span className="sidebar__text" style={{color: "#333", textAlign:"center", marginBlockEnd:"48px"}}><IoPersonCircleSharp className= "avatar" />Admin</span>} 
+        {isOpen && <span className="sidebar__text" style={{color: "#333", textAlign:"center"}}><IoPersonCircleSharp className= "avatar" />Admin</span>} 
         {/* <p style={{color: "#333", textAlign:"center", marginBlockEnd:"48px"}}>Admin</p> */}
         </div>
         
           <li className="sidebar-menu-item">
-            <p style={{color: "#173C96"}}>{isOpen && <span className="sidebar__text">Navigation</span>}</p>
+            <p style={{color: "#173C96"}}>{isOpen && <span className="sidebar__text" style={{marginBlockEnd: "32px"}}>Navigation</span>}</p>
             <a href="#" className="sidebar-menu-link">
               <FaThList style={{marginRight:"12px", fontSize:"17px"}}/>{isOpen && <span className="sidebar__text">Dashboard</span>}
             </a>
           </li>
           <li className="sidebar-menu-item">
             <a href="#" className="sidebar-menu-link">
-             <HiUserGroup style={{marginRight:"12px", fontSize:"17px"}}/> {isOpen && <span className="sidebar__text">Dashboard</span>}
+             <HiUserGroup style={{marginRight:"12px", fontSize:"17px"}}/> {isOpen && <span className="sidebar__text">Customers</span>}
             </a>
           </li>
           <li className="sidebar-menu-item">
             <a href="#" className="sidebar-menu-link">
-              <BiGroup style={{marginRight:"12px", fontSize:"17px"}}/> {isOpen && <span className="sidebar__text">Dashboard</span>}
+              <BiGroup style={{marginRight:"12px", fontSize:"17px"}}/> {isOpen && <span className="sidebar__text">Suppliers</span>}
             </a>
           </li>          
           <li className="sidebar-menu-item">
             <a href="#" className="sidebar-menu-link">
-              <GiMedicines style={{marginRight:"12px", fontSize:"17px"}}/> {isOpen && <span className="sidebar__text">Dashboard</span>}
+              <GiMedicines style={{marginRight:"12px", fontSize:"17px"}}/> {isOpen && <span className="sidebar__text">Products</span>}
             </a>
           </li>
           <li className="sidebar-menu-item">
             <a href="#" className="sidebar-menu-link">
-              <BsStack style={{marginRight:"12px", fontSize:"17px"}}/>{isOpen && <span className="sidebar__text">Dashboard</span>}
+              <BsStack style={{marginRight:"12px", fontSize:"17px"}}/>{isOpen && <span className="sidebar__text">Stock</span>}
             </a>
           </li>
           <li className="sidebar-menu-item">
             <a href="#" className="sidebar-menu-link">
-              <HiShoppingCart style={{marginRight:"12px", fontSize:"17px"}}/>{isOpen && <span className="sidebar__text">Dashboard</span>}
+              <HiShoppingCart style={{marginRight:"12px", fontSize:"17px"}}/>{isOpen && <span className="sidebar__text">Orders</span>}
             </a>
           </li>
           <li className="sidebar-menu-item">
             <a href="#" className="sidebar-menu-link">
-              <FaIdCard style={{marginRight:"12px", fontSize:"17px"}}/>{isOpen && <span className="sidebar__text">Dashboard</span>}
+              <FaIdCard style={{marginRight:"12px", fontSize:"17px"}}/>{isOpen && <span className="sidebar__text">Employee</span>}
             </a>
           </li>
           <li className="sidebar-menu-item">
             <a href="#" className="sidebar-menu-link">
-              <MdOutlineInventory style={{marginRight:"12px", fontSize:"17px"}}/>{isOpen && <span className="sidebar__text">Dashboard</span>}
+              <MdOutlineInventory style={{marginRight:"12px", fontSize:"17px"}}/>{isOpen && <span className="sidebar__text">Inventory</span>}
             </a>
           </li>
           <li className="sidebar-menu-item">
             <a href="#" className="sidebar-menu-link">
-              <BsGearFill style={{marginRight:"12px", fontSize:"17px"}}/>{isOpen && <span className="sidebar__text">Dashboard</span>}
+              <BsGearFill style={{marginRight:"12px", fontSize:"17px"}}/>{isOpen && <span className="sidebar__text">Settings</span>}
             </a>
           </li>
         </ul>

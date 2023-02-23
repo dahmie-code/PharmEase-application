@@ -5,6 +5,8 @@ import {IoPersonCircleSharp} from 'react-icons/io5';
 
 
 
+
+
 const Navbar = ({toggle}) => {
   // const [sidebarOpen, setSidebarOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -19,7 +21,7 @@ const Navbar = ({toggle}) => {
 
   return (
 
-    <nav className="navbar">
+    <nav className="navbar__wrapper">
         
     <div className="navbar__container">
         <div className="navbar__left">

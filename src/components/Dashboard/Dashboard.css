@@ -1,0 +1,89 @@
+
+ .dashboard-container{
+    margin-inline-start: 21px;
+    margin-inline-end: 80px;
+    /* max-width: 955px;
+    margin: auto; */
+ }
+
+.mid-cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block-end: 32px;
+}
+
+.graph {
+    width: 434px;
+    height: 294px;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 13px 20px;
+}
+
+.orders{
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 13px 20px;
+    max-width: 493px;
+    height: 294px;
+    overflow-y: hidden;
+}
+
+.recent-orders h2{
+    font-size: 24px;
+    color: #173C96;
+}
+.table {
+border-collapse: collapse;
+/* width: 100%; */
+background-color: transparent;
+}
+
+.table thead th {
+    border: none;
+    border-bottom: 2px solid #000;
+    /* padding: 4px; */
+    text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+    color: #444;
+  }
+  
+  .table tbody td {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 15px 0 5px;
+    text-align: left;
+    font-size: 15px;
+  }
+
+.table th svg {
+margin-left: 5px;
+vertical-align: middle;
+cursor: pointer;
+}
+
+.table td {
+text-align: left;
+}
+
+
+.table a {
+text-decoration: none;
+color: #444;
+}
+
+.last-cards{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.chart {
+    background-color: #fff;
+    width: 305px;
+    height: 269px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
