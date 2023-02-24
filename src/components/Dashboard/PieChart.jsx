@@ -10,7 +10,7 @@ const DailyReport = () => {
         labels: ['Total Sales', 'Total Purchases', 'Total Returns', 'Cash Received'],
         datasets: [
           {
-            label: '# of Votes',
+            label: '# of Products',
             data: [400, 300, 200,180],
             backgroundColor: [
               '#174CBB',

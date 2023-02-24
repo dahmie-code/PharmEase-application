@@ -5,9 +5,9 @@ const AddProductModal = ({ show, handleClose, editingProduct, productView }) => 
   const [name, setName] = useState('');
   const [image, setImage] = useState('');
   const [category, setCategory] = useState('');
-  const [price, setPrice] = useState('');
-  
+  const [price, setPrice] = useState('');  
   const [isViewing, setIsViewing] = useState(false);
+
   useEffect(() => {
     if (editingProduct) {
       setName(editingProduct.name);

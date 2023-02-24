@@ -1,17 +1,23 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Table, Button } from 'react-bootstrap';
 import AddCategoryModal from './AddCategoryModal';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { category } from './category';
 import Pagination from '../Global/Pagination';
+// import { v4 as uuidv4 } from 'uuid';
+
 
 const CategoryTable = ({ categories = category }) => {
   const [showModal, setShowModal] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
-  const [filteredCategories, setFilteredCategories] = useState(categories);
+  const [filteredCategories, setFilteredCategories] = useState([]);
   const [editingCategories, setEditingCategories] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [productsPerPage] = useState(10);
+
+  useEffect(() => {
+    setFilteredCategories(categories);
+    }, [categories]);
 
   const handleCloseModal = () => {
     setShowModal(false);
@@ -23,6 +29,16 @@ const CategoryTable = ({ categories = category }) => {
     setEditingCategories(null);
   };
 
+  const handleAdd = (newCategory) => {
+    const updatedCategories = [
+    ...filteredCategories,
+    { ...newCategory, id: filteredCategories.length + 1 }
+    ];
+    setFilteredCategories(updatedCategories);
+    console.log(updatedCategories);
+    
+    }
+  
   const handleEditClick = (category) => {
     setEditingCategories(category);
     setShowModal(true);
@@ -67,7 +83,7 @@ const CategoryTable = ({ categories = category }) => {
           onChange={handleSearch}
         />
       </div>
-      <Table bordered hover>
+      <Table bordered hover responsive="sm md lg xl">
         <thead>
           <tr>
             <th>S/N</th>
@@ -102,7 +118,10 @@ const CategoryTable = ({ categories = category }) => {
       <AddCategoryModal
         show={showModal}
         handleClose={handleCloseModal}
+        handleAdd={handleAdd}
         editingCategories={editingCategories}
+        handleDeleteClick={handleDeleteClick}
+        handleEditClick={handleEditClick}
       />
     </div>
   );

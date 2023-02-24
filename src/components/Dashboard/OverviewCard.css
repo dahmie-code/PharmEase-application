@@ -10,6 +10,8 @@
         align-items: center;
     }
 }
+
+
 .overview-card{
     width: 22%;
     height: 141px;
@@ -17,7 +19,7 @@
     border-radius: 15px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
     margin-block-end: 32px;
-    padding: 36px 13px 17px;
+    padding: 15px 13px 17px;
 }
 @media screen and (max-width: 600px){
     .overview-card{
@@ -25,6 +27,21 @@
         height: 100%;
         margin-bottom: 20px;
     }
+}
+@media screen and (max-width: 900px){
+    .overview-cards{
+        flex-wrap: wrap;
+    }
+    .overview-card{
+        width: 45%;
+        height: 100%;
+        margin-bottom: 10px;
+    }
+    .overview-card-content{
+        flex-direction: column;
+        text-align: center;
+    }
+    
 }
 .overview-card-content {
     width: 100%;

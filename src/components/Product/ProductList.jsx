@@ -73,7 +73,7 @@ const ProductList = ({ products = productsData }) => {
 //   }
 
   return (
-    <div >
+    < >
       <div className="d-flex justify-content-between align-items-center mb-4">
         <Button
           variant="primary"
@@ -90,7 +90,7 @@ const ProductList = ({ products = productsData }) => {
         />
       </div>
       <div>
-        <Table bordered responsive hover >
+        <Table bordered responsive="sm md lg xl" hover >
         <thead>
           <tr>
             <th>S/N</th>
@@ -170,7 +170,7 @@ const ProductList = ({ products = productsData }) => {
         editingProduct={editingProduct}
         productView={productView}
       />
-    </div>
+    </>
   );
 };
 

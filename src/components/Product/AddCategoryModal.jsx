@@ -16,6 +16,8 @@ const AddCategoryModal = ({ show, handleClose, editingCategories, handleAdd, han
       handleEditClick({...editingCategories, name});
     } else {
       handleAdd({name});
+      console.log("name: ", name);
+
     }
     handleClose();
   }

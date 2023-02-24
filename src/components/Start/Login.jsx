@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import './Form.css';
 import LoginImg from "../../assets/signIn.jpg";
+import LogoImg from "../../assets/signUplogo.png";
 import { FormInput, EyeIcon } from "./common";
 
 // const navigate = useNavigate();
@@ -11,8 +12,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
-  const [authenticated, setauthenticated] = useState(
-    localStorage.getItem(localStorage.getItem("authenticated") || false));
+
 
   const users = [{ email: "test@email.com", password: "testpassword" }];
 
@@ -24,24 +24,26 @@ const Login = () => {
     setRememberMe(!rememberMe);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    const account = users.find((user) => user.email=== email);
-   if (account && account.password === password) {
-   setauthenticated(true)
-    localStorage.setItem("authenticated", true);
-    navigate("maincontainer");
+  const handleLogin = (e) => { // Define handleLogin function
+    e.preventDefault();
+    const user = users.find(
+      (user) => user.email === email && user.password === password
+    );
+    if (user) {
+      localStorage.setItem("authenticated", true);
+      navigate('/dashboard'); // Navigate to dashboard
+    } else {
+      alert("Invalid email or password.");
     }
-   };
-  // const handleLogin = useNavigate();
-  // handleLogin("/main");  
+  };
 
   return (
     <div className="form-container">
       <div className="form">
+      <div className="logo"><img src= {LogoImg} alt="logo" /></div>
         <h2>Welcome Back!</h2>
         <p>Please enter your details below.</p>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleLogin}>
         <FormInput
             type="email"
             id="email"
@@ -80,7 +82,7 @@ const Login = () => {
             </div>
             <button type="submit">Log in</button>
         </form>
-        <p className="noAccount">Don't have an account? <Link to="/signup">Sign up</Link></p>
+        <p className="account">Don't have an account? <Link to="/signup">Sign up</Link></p>
       </div>
       <div className="form-image">
         <img src={LoginImg} alt="Login" />

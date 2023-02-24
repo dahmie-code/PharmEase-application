@@ -2,6 +2,8 @@ import "./Form.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import SignUpImg from "../../assets/signUp.jpg";
+import LogoImg from "../../assets/signUplogo.png";
+
 import { FormInput, EyeIcon } from "./common";
 
 const SignUp = () => {
@@ -25,6 +27,8 @@ const SignUp = () => {
   return (
     <div className="form-container">
       <div className="form">
+        <div className="logo"><img src= {LogoImg} alt="logo" /></div>
+        
         <h2>Hi there!</h2>
         <p>Please set up your account.</p>
         <form onSubmit={handleSubmit}>
@@ -64,7 +68,7 @@ const SignUp = () => {
           </div>
           <button type="submit">Register</button>
         </form>
-        <p className="haveAccount">
+        <p className="account">
           Already have an account? <Link to="/">Log in</Link>
         </p>
       </div>

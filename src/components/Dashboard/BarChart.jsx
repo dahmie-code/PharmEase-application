@@ -82,7 +82,8 @@ const MonthlyProgressChart = () => {
   return (
     <div>
       <h2>Monthly Progress</h2>
-      <Bar data={data} options={options} />
+      <div className="graph-container">
+      <Bar data={data} options={options} /></div>
     </div>
   );
 };

@@ -1,10 +1,6 @@
 import "./Sidebar.css";
-import { FaThList, FaIdCard } from "react-icons/fa";
-import {HiUserGroup, HiShoppingCart} from "react-icons/hi";
-import {BiGroup} from "react-icons/bi";
-import {GiMedicines} from "react-icons/gi";
-import {BsStack, BsGearFill} from "react-icons/bs";
-import {MdOutlineInventory} from "react-icons/md";
+import { NavLink} from "react-router-dom";
+import {links} from "./links"
 import {IoPersonCircleSharp} from "react-icons/io5";
 
 const SideBar = ({isOpen}) => {
@@ -14,13 +10,39 @@ const SideBar = ({isOpen}) => {
       
       <aside className= {isOpen ? "sidebar__open" : "sidebar__closed"}>
         
-        <ul className="sidebar__menu">
+        <div className="sidebar__menu">
+          <>
         <div className="sidebar__avatar">
-        {isOpen && <span className="sidebar__text" style={{color: "#333", textAlign:"center"}}><IoPersonCircleSharp className= "avatar" />Admin</span>} 
-        {/* <p style={{color: "#333", textAlign:"center", marginBlockEnd:"48px"}}>Admin</p> */}
-        </div>
+        {isOpen && (<span className="sidebar__text" style={{color: "#333", textAlign:"center"}}><IoPersonCircleSharp className= "avatar" />Admin</span>
         
-          <li className="sidebar-menu-item">
+        )}</div>
+        
+        {
+          links.map((item)=>(
+            <div key={item.links.icon} className="sidebar-menu-item">
+              {isOpen && (<p >
+                  {item.title}
+                </p>)}
+              {
+                item.links.map((link)=>(
+                  <NavLink 
+                  to={`/${link.name}`}
+                  key={link.name}
+                  className="sidebar-menu-link"
+                  activeClassName="sidebar__link--active"
+                  >
+                    <>
+                    <div style={{marginRight:"12px", fontSize:"17px"}}>{link.icon}</div>
+                    {isOpen && <span className="sidebar__text">{link.name}</span>
+                    }
+                    </>
+                  </NavLink>
+                ))
+              }
+            </div>
+          ))
+        }
+          {/* <li className="sidebar-menu-item">
             <p style={{color: "#173C96"}}>{isOpen && <span className="sidebar__text" style={{marginBlockEnd: "32px"}}>Navigation</span>}</p>
             <a href="#" className="sidebar-menu-link">
               <FaThList style={{marginRight:"12px", fontSize:"17px"}}/>{isOpen && <span className="sidebar__text">Dashboard</span>}
@@ -65,8 +87,9 @@ const SideBar = ({isOpen}) => {
             <a href="#" className="sidebar-menu-link">
               <BsGearFill style={{marginRight:"12px", fontSize:"17px"}}/>{isOpen && <span className="sidebar__text">Settings</span>}
             </a>
-          </li>
-        </ul>
+          </li> */}
+        </> 
+    </div>
       </aside>
       
     </>
@@ -74,3 +97,4 @@ const SideBar = ({isOpen}) => {
 };
 
 export default SideBar;
+
