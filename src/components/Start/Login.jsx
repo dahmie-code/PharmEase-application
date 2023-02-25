@@ -5,7 +5,6 @@ import LoginImg from "../../assets/signIn.jpg";
 import LogoImg from "../../assets/signUplogo.png";
 import { FormInput, EyeIcon } from "./common";
 
-// const navigate = useNavigate();
 const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");

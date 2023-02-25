@@ -8,7 +8,6 @@ import SideBar from "./SideBar";
 import Login from "../Start/Login";
 import SignUp from "../Start/SignUp";
 
-// import ProtectedRoute from './ProtectedRoute';
 
 
 const MainContainer = () => {

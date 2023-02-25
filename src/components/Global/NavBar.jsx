@@ -5,17 +5,8 @@ import { FaBars, FaBell, FaUser, FaAngleDown, FaSignOutAlt, FaUserEdit } from 'r
 import {IoPersonCircleSharp} from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 
-
-
-
-
 const Navbar = ({toggle}) => {
-  // const [sidebarOpen, setSidebarOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-
-  // const toggleSidebar = () => {
-  //   setSidebarOpen(!sidebarOpen);
-  // };
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
@@ -27,7 +18,7 @@ const Navbar = ({toggle}) => {
         
     <div className="navbar__container">
         <div className="navbar__left">
-          {/* <RiDashboardLine className="navbar__icon" /> */}
+         
           <Link to ="/dashboard" className='logo'><img src= {logo} alt="logo" /></Link>          
           <h1 className="navbar__title">PharmEase</h1>
         </div>

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Tabs, Tab} from 'react-bootstrap';
-// import ProductTab from './ProductTab';
 import ProductList from './ProductList';
 import CategoryTable from './CategoryTable';
 import ExpiredProducts from './ExpiredProducts';
