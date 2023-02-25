@@ -32,7 +32,7 @@ const MainContainer = () => {
               <div className="wrapper">
                 <SideBar isOpen={isOpen} />
                 <div className={`content ${isOpen ? 'shifted' : ''}`}>
-                  <Dashboard authenticated={authenticated} />
+                  <Dashboard />
                 </div>
               </div>
             </>
